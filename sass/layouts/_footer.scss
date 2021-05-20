@@ -5,6 +5,9 @@
     margin: auto;
     padding: 2rem 1rem 1.5rem 1rem;
     max-width: 1200px;
+    @include tablet-only {
+      padding-left: 2vw;
+    }
     i {
       padding-right: 0.5rem;
     }
@@ -18,6 +21,9 @@
       padding-top: 1rem;
       li {
         padding-right: 8rem;
+        @include tablet-only {
+          padding-right: 4rem;
+        }
       }
     }
   }

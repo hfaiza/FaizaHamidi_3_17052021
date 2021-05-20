@@ -49,12 +49,21 @@ header .fa-arrow-left {
   }
   div {
     font-size: 1.3rem;
+    @include tablet-only {
+      font-size: 1.7rem;
+    }
   }
   i {
     font-size: 1.5rem;
+    @include tablet-only {
+      font-size: 1.9rem;
+    }
   }
   strong {
     font-size: 0.9rem;
+    @include tablet-only {
+      font-size: 1.3;
+    }
   }
 }
 

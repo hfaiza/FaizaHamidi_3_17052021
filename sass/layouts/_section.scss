@@ -5,13 +5,17 @@ form {
   border-radius: 40px 40px 0 0;
   text-align: center;
   #recherche {
-    background: $localisation-color;
+    background: transparent;
     border: none;
     width: 180px;
-    padding: 2rem 0 2rem 1rem;
+    padding: 2.3rem 0 2rem 1rem;
   }
   label i {
     vertical-align: baseline;
+  }
+  @include tablet-only {
+    border-radius: 0;
+    box-shadow: 0 15px 10px -10px #d3d3d3 inset;
   }
 }
 
@@ -25,6 +29,9 @@ form {
   span {
     margin: 2rem 0 0.5rem 0;
   }
+  @include tablet-only {
+    border-radius: 0;
+  }
 }
 
 /* FONCTIONNEMENT */
@@ -33,6 +40,10 @@ form {
   &__list {
     display: flex;
     justify-content: space-around;
+    @include tablet-only {
+      flex-direction: column;
+      padding-left: 1vw;
+    }
     div {
       background: $section-color;
       box-shadow: $shadow;
@@ -40,11 +51,19 @@ form {
       padding: 2rem;
       border-radius: 30px;
       position: relative;
+      @include tablet-only {
+        margin-bottom: 3vw;
+        width: auto;
+      }
     }
     i {
       color: darken($section-color, 40%);
       padding: 0 1rem 0 1rem;
       vertical-align: middle;
+      @include tablet-only {
+        width: 10px;
+        padding-right: 7vw;
+      }
     }
   }
   strong {
@@ -57,6 +76,9 @@ form {
     padding: 0.5rem;
     position: absolute;
     left: -15px;
+  }
+  @include tablet-only {
+    padding: 2vw;
   }
 }
 
@@ -113,6 +135,11 @@ form {
       right: 14px;
     }
   }
+
+  @include tablet-only {
+    padding: 2vw 2vw 3vw 2vw;
+    background: $section-color;
+  }
 }
 
 /* PAGE DES MENUS */
@@ -121,22 +148,27 @@ form {
   display: flex;
   flex-direction: column;
   border-radius: 40px 40px 0 0;
-  background: $section-color;
   overflow: hidden;
-  text-align: center;
-  padding-bottom: 1rem;
   img {
     height: 300px;
     object-fit: cover;
+  }
+  @include tablet-only {
+    border-radius: 0;
   }
 }
 
 .menu {
   padding: 1rem;
   text-align: left;
-
+  background: $section-color;
+  @include tablet-only {
+    border-radius: 50px 50px 0 0;
+    margin-top: -5vw;
+  }
   h1 {
     text-align: center;
+    margin: 0;
     i {
       padding-left: 1rem;
     }
@@ -158,6 +190,10 @@ form {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+    @include tablet-only {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1vw;
+    }
 
     a div {
       background: #fff;
@@ -175,6 +211,9 @@ form {
         float: right;
         padding-right: 0.5rem;
       }
+    }
+    + p {
+      text-align: center;
     }
   }
 }
