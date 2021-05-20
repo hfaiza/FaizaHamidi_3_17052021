@@ -1,14 +1,16 @@
 header {
   text-align: center;
   padding: 1.5rem 0 1rem 0;
+  position: relative;
   img {
     height: 3rem;
+    @include mobile-only {
+      height: 2rem;
+    }
   }
 
   i {
-    float: left;
-  }
-  @include tablet-only {
-    padding-left: 2vw;
+    position: absolute;
+    left: 20px;
   }
 }

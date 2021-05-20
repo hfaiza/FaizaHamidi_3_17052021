@@ -3,6 +3,9 @@ body {
   h1:not(.main-title) {
     font-family: $secondary-font, cursive;
     font-size: 2.3rem;
+    @include mobile-only {
+      font-size: 1.6rem;
+    }
   }
 
   p {
@@ -29,6 +32,9 @@ form {
 
 header .fa-arrow-left {
   font-size: 3rem;
+  @include mobile-only {
+    font-size: 2rem;
+  }
 }
 
 .presentation {
@@ -37,6 +43,9 @@ header .fa-arrow-left {
   }
   p {
     font-size: 1.5rem;
+    @include mobile-only {
+      font-size: 1.3rem;
+    }
   }
   div {
     color: #fff;
@@ -52,18 +61,21 @@ header .fa-arrow-left {
     @include tablet-only {
       font-size: 1.7rem;
     }
+    @include mobile-only {
+      font-size: 1.2rem;
+    }
   }
   i {
     font-size: 1.5rem;
     @include tablet-only {
       font-size: 1.9rem;
     }
+    @include mobile-only {
+      font-size: 1.3rem;
+    }
   }
   strong {
     font-size: 0.9rem;
-    @include tablet-only {
-      font-size: 1.3;
-    }
   }
 }
 

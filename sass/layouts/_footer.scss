@@ -8,8 +8,14 @@
     @include tablet-only {
       padding-left: 2vw;
     }
+    @include mobile-only {
+      padding-left: 6vw;
+    }
     i {
       padding-right: 0.5rem;
+      @include mobile-only {
+        width: 1rem;
+      }
     }
     img {
       height: 1.5rem;
@@ -19,10 +25,16 @@
       list-style-type: none;
       display: flex;
       padding-top: 1rem;
+      @include mobile-only {
+        flex-direction: column;
+      }
       li {
         padding-right: 8rem;
         @include tablet-only {
-          padding-right: 4rem;
+          padding-right: 3rem;
+        }
+        @include mobile-only {
+          margin-bottom: 2vw;
         }
       }
     }

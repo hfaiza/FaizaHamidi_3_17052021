@@ -42,7 +42,7 @@ form {
     justify-content: space-around;
     @include tablet-only {
       flex-direction: column;
-      padding-left: 1vw;
+      padding: 2vw 1vw 2vw 2vw;
     }
     div {
       background: $section-color;
@@ -52,8 +52,11 @@ form {
       border-radius: 30px;
       position: relative;
       @include tablet-only {
-        margin-bottom: 3vw;
+        margin-bottom: 5vw;
         width: auto;
+      }
+      @include mobile-only {
+        margin-bottom: 6vw;
       }
     }
     i {
@@ -63,6 +66,10 @@ form {
       @include tablet-only {
         width: 10px;
         padding-right: 7vw;
+      }
+      @include mobile-only {
+        padding-right: 9vw;
+        padding-left: 2vw;
       }
     }
   }
@@ -80,6 +87,9 @@ form {
   @include tablet-only {
     padding: 2vw;
   }
+  @include mobile-only {
+    padding: 5vw 4vw 10vw 5vw;
+  }
 }
 
 /* LISTE DES RESTAURANTS */
@@ -90,6 +100,12 @@ form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    @include tablet-only {
+      gap: 25px;
+    }
+    @include mobile-only {
+      grid-template-columns: repeat(1, 1fr);
+    }
     &__description {
       background: #fff;
       padding: 1.3rem 2rem 0.5rem 1.2rem;
@@ -137,8 +153,12 @@ form {
   }
 
   @include tablet-only {
-    padding: 2vw 2vw 3vw 2vw;
+    padding: 2vw 2vw 8vw 2vw;
     background: $section-color;
+  }
+
+  @include mobile-only {
+    padding: 5vw 4vw 15vw 4vw;
   }
 }
 
@@ -166,11 +186,25 @@ form {
     border-radius: 50px 50px 0 0;
     margin-top: -5vw;
   }
+  @include mobile-only {
+    margin-top: -10vw;
+  }
   h1 {
     text-align: center;
+    align-items: baseline;
     margin: 0;
+    @include mobile-only {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+      text-align: left;
+      padding-left: 1rem;
+    }
     i {
       padding-left: 1rem;
+      @include mobile-only {
+        padding-right: 1rem;
+      }
     }
   }
   h2 {
@@ -201,7 +235,6 @@ form {
       margin-bottom: 15px;
       padding: 0.8rem;
       box-shadow: $shadow;
-
       p {
         margin-top: 0.3rem;
         margin-bottom: 0;
