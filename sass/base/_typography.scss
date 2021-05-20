@@ -1,0 +1,106 @@
+body {
+  font-family: $primary-font, sans-serif;
+  h1:not(.main-title) {
+    font-family: $secondary-font, cursive;
+    font-size: 2.3rem;
+  }
+
+  p {
+    font-weight: 100;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .button {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 400;
+  }
+}
+
+form {
+  label i {
+    font-size: 1.5rem;
+  }
+}
+
+header .fa-arrow-left {
+  font-size: 3rem;
+}
+
+.presentation {
+  .main-title {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  div {
+    color: #fff;
+  }
+}
+
+.fonctionnement {
+  h2 {
+    font-size: 1.8rem;
+  }
+  div {
+    font-size: 1.3rem;
+  }
+  i {
+    font-size: 1.5rem;
+  }
+  strong {
+    font-size: 0.9rem;
+  }
+}
+
+.restaurants {
+  h2 {
+    font-size: 1.8rem;
+  }
+  article {
+    h3 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1.3rem;
+    }
+    i {
+      font-size: 2rem;
+    }
+  }
+}
+
+.menu {
+  h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 100;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+.footer {
+  * {
+    color: #fff;
+  }
+}
+
+::placeholder {
+  font-family: $primary-font, sans-serif;
+  color: #000;
+  opacity: 1;
+  font-size: 1.4rem;
+}

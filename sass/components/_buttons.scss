@@ -1,0 +1,11 @@
+.button {
+  display: inline-block;
+  background: linear-gradient(
+    to bottom right,
+    $secondary-color,
+    $primary-color
+  );
+  border-radius: 40px;
+  padding: 20px 30px;
+  box-shadow: $shadow;
+}

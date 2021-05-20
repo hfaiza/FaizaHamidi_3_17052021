@@ -1,0 +1,22 @@
+{
+  "name": "faizahamidi_3_17052021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css --style compressed",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/",
+    "sass-prefix": "npm run sass && npm run prefix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hfaiza/FaizaHamidi_3_17052021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/hfaiza/FaizaHamidi_3_17052021/issues"
+  },
+  "homepage": "https://github.com/hfaiza/FaizaHamidi_3_17052021#readme"
+}

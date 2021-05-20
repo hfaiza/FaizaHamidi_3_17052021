@@ -1,0 +1,24 @@
+.footer {
+  width: 100%;
+  background: $footer-color;
+  footer {
+    margin: auto;
+    padding: 2rem 1rem 1.5rem 1rem;
+    max-width: 1200px;
+    i {
+      padding-right: 0.5rem;
+    }
+    img {
+      height: 1.5rem;
+    }
+    ul {
+      padding-left: 0;
+      list-style-type: none;
+      display: flex;
+      padding-top: 1rem;
+      li {
+        padding-right: 8rem;
+      }
+    }
+  }
+}
