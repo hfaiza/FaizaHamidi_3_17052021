@@ -7,10 +7,17 @@
   }
 }
 
+.bloc-page-index,
+.footer-index {
+  opacity: 0;
+  animation: index 3s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
 body {
   margin: 0;
   font-family: $primary-font, sans-serif;
-
+  position: relative;
   h3 {
     margin: 0;
   }

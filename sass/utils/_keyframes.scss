@@ -1,3 +1,64 @@
+// ANIMATION LOADER
+
+@keyframes word {
+  10% {
+    content: "drink";
+  }
+  20% {
+    content: "taste";
+  }
+  30% {
+    content: "meal";
+  }
+  40% {
+    content: "lunch";
+  }
+  50% {
+    content: "meat";
+  }
+  60% {
+    content: "spoon";
+  }
+  70% {
+    content: "wine";
+  }
+  80% {
+    content: "cook";
+  }
+  100% {
+    content: "food!";
+  }
+}
+
+@keyframes visibility {
+  from {
+    visibility: visible;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes index {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 // ANIMATION DU BOUTON "J'AIME"
 
 @keyframes heart {
