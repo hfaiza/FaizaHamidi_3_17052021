@@ -1,7 +1,10 @@
-.footer {
+footer {
   width: 100%;
   background: $footer-color;
-  footer {
+  .footer {
+    * {
+      color: #fff;
+    }
     margin: auto;
     padding: 2rem 1rem 1.5rem 1rem;
     max-width: 1200px;
@@ -17,8 +20,9 @@
         width: 1rem;
       }
     }
-    img {
-      height: 1.5rem;
+    .logo {
+      font-family: $secondary-font;
+      font-size: 1.5rem;
     }
     ul {
       padding-left: 0;

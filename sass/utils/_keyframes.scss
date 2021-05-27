@@ -1,0 +1,36 @@
+// ANIMATION DU BOUTON "J'AIME"
+
+@keyframes heart {
+  from {
+    transform: scale(0.6);
+    opacity: 0.6;
+  }
+
+  to {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+// ANIMATIONS DES PLATS
+
+@keyframes fadein {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

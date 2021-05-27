@@ -9,9 +9,21 @@
 
 body {
   margin: 0;
+  font-family: $primary-font, sans-serif;
+
   h3 {
     margin: 0;
   }
+
+  p {
+    font-weight: 100;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
   section {
     padding-top: 1rem;
   }

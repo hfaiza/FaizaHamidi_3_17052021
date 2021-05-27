@@ -1,18 +1,21 @@
-/* COULEURS */
+// COULEURS
 
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
 
+$gradient: linear-gradient(to bottom right, $secondary-color, $primary-color);
+
 $footer-color: #353535;
 $section-color: #f6f6f6;
 $localisation-color: #eaeaea;
 
-/* POLICES D'ÉCRITURE */
+// POLICES D'ÉCRITURE
 
 $primary-font: "Roboto";
 $secondary-font: "Shrikhand";
 
-/* OMBRES */
+// OMBRES
 
 $shadow: 0 0 15px #d3d3d3;
+$button-shadow: 0 0 15px #adadad;
