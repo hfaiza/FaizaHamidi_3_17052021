@@ -7,7 +7,7 @@
   font-size: 1.3rem;
   color: #fff;
   font-weight: 400;
-  transition: 1s;
+  transition: opacity 1s, box-shadow 1s;
   &:hover {
     opacity: 0.8;
     box-shadow: 0 0 15px 5px #adadad;
