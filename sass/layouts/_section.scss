@@ -60,44 +60,44 @@ form {
   &__list {
     display: flex;
     justify-content: space-around;
+    margin-top: 2.5rem;
     @include tablet-only {
-      flex-direction: column;
-      padding: 2vw 1vw 2vw 2vw;
+      display: block;
+      margin-left: 15px;
     }
-    div {
+    a {
+      display: block;
       background: $section-color;
       box-shadow: $shadow;
       font-size: 1.2rem;
-      width: 18rem;
-      padding: 2rem;
+      padding: 2rem 3rem;
       border-radius: 30px;
       position: relative;
-      transition: 1s;
+      transition: background-color 1s, box-shadow 1s, color 1s;
       @include tablet-only {
         font-size: 1.7rem;
-        margin-bottom: 5vw;
+        margin-bottom: 2.5rem;
         width: auto;
       }
       @include mobile-only {
         font-size: 1.2rem;
-        margin-bottom: 6vw;
       }
       &:hover {
-        background: lighten($section-color, 1%);
+        background-color: lighten($primary-color, 37%);
         box-shadow: 0 0 25px 2px #d3d3d3;
-        transition: 1s;
+        transition: background-color 1s, box-shadow 1s;
         i {
           color: $primary-color;
-          transition: 1s;
+          transition: color 1s;
         }
       }
     }
     i {
       font-size: 1.5rem;
       color: darken($section-color, 40%);
-      padding: 0 1rem 0 1rem;
+      padding-right: 2rem;
       vertical-align: middle;
-      transition: 1s;
+      transition: color 1s;
       @include tablet-only {
         font-size: 1.9rem;
         width: 10px;
@@ -110,18 +110,32 @@ form {
       }
     }
   }
-  strong {
-    height: 1rem;
-    width: 1rem;
-    font-size: 0.9rem;
-    text-align: center;
-    background: $primary-color;
-    color: #fff;
-    border-radius: 50px;
-    padding: 0.5rem;
-    position: absolute;
-    left: -15px;
+
+  ol {
+    counter-reset: number 0;
+    padding-left: 0;
   }
+
+  li {
+    counter-increment: number;
+    list-style-type: none;
+    display: block;
+    z-index: 1;
+    &::before {
+      z-index: 2;
+      display: inline-block;
+      content: counter(number);
+      font-size: 1rem;
+      background: $primary-color;
+      color: #fff;
+      border-radius: 50%;
+      padding: 0.4rem 0.7rem;
+      position: absolute;
+      margin-left: -15px;
+      margin-top: 30px;
+    }
+  }
+
   @include tablet-only {
     padding: 2vw;
   }
@@ -162,7 +176,7 @@ form {
       padding: 1.3rem 1rem 0.5rem 1.2rem;
       span {
         float: right;
-        padding-top: 0.4rem;
+        margin-top: -1rem;
         :last-child {
           color: transparent;
           &:hover {
@@ -249,20 +263,28 @@ form {
     font-family: $secondary-font, cursive;
     font-size: 2rem;
     text-align: center;
-    align-items: baseline;
     margin: 0;
     @include mobile-only {
       font-size: 1.6rem;
-      display: flex;
-      justify-content: space-between;
-      margin-top: 1rem;
+      margin-top: 0;
       text-align: left;
       padding-left: 1rem;
     }
-    i {
+    span {
       padding-left: 1rem;
+      margin-top: -0.5rem;
+      :last-child {
+        color: transparent;
+        &:hover {
+          background: $gradient;
+          -webkit-background-clip: text;
+          color: transparent;
+          animation: heart 2s forwards;
+        }
+      }
       @include mobile-only {
-        padding-right: 1rem;
+        float: right;
+        margin-top: -0.4rem;
       }
     }
   }
@@ -368,6 +390,7 @@ form {
     }
   }
   div ~ p {
+    margin-top: 3rem;
     text-align: center;
   }
 }

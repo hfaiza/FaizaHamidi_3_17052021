@@ -1,6 +1,9 @@
 @import "utils/variables";
 @import "utils/mixins";
-@import "utils/keyframes";
+
+@import "keyframes/keyframes-loader";
+@import "keyframes/keyframes-heart";
+@import "keyframes/keyframes-menu";
 
 @import "base/base";
 
