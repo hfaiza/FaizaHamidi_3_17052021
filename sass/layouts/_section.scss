@@ -114,11 +114,11 @@ form {
   ol {
     counter-reset: number 0;
     padding-left: 0;
+    list-style-type: none;
   }
 
   li {
     counter-increment: number;
-    list-style-type: none;
     display: block;
     z-index: 1;
     &::before {
@@ -181,6 +181,7 @@ form {
           color: transparent;
           &:hover {
             background: $gradient;
+            background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
             animation: heart 2s forwards;
@@ -277,6 +278,7 @@ form {
         color: transparent;
         &:hover {
           background: $gradient;
+          background-clip: text;
           -webkit-background-clip: text;
           color: transparent;
           animation: heart 2s forwards;
