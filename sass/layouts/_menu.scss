@@ -1,0 +1,166 @@
+// PAGE DES MENUS
+
+.menu-page {
+  display: flex;
+  flex-direction: column;
+  border-radius: 40px 40px 0 0;
+  overflow: hidden;
+  margin-top: 1rem;
+  img {
+    height: 300px;
+    object-fit: cover;
+  }
+  @include tablet-only {
+    border-radius: 0;
+  }
+}
+
+.menu {
+  padding: 1rem;
+  text-align: left;
+  background: $section-color;
+  @include tablet-only {
+    border-radius: 50px 50px 0 0;
+    margin-top: -5vw;
+  }
+  @include mobile-only {
+    margin-top: -10vw;
+  }
+  h1 {
+    font-family: $secondary-font, cursive;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    @include mobile-only {
+      font-size: 1.6rem;
+      margin-top: 0;
+      text-align: left;
+      padding-left: 1rem;
+    }
+    span {
+      padding-left: 1rem;
+      margin-top: -0.5rem;
+      :last-child {
+        color: transparent;
+        &:hover {
+          background: $gradient;
+          -webkit-background-clip: text;
+          color: transparent;
+          animation: heart 2s forwards;
+        }
+      }
+      @include mobile-only {
+        float: right;
+        margin-top: -0.4rem;
+      }
+    }
+  }
+  h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 100;
+    position: relative;
+    line-height: 2.5rem;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 3rem;
+      height: 0.2rem;
+      background-color: $tertiary-color;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    @include tablet-only {
+      display: block;
+    }
+    section {
+      padding: 0 0.6rem 0 0.6rem;
+      overflow: hidden;
+      max-width: 100%;
+      @include mobile-only {
+        overflow: visible;
+      }
+    }
+  }
+
+  &__card {
+    opacity: 0;
+    display: flex;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    box-shadow: $shadow;
+    animation: fadein 1s ease-in-out forwards;
+    &--1 {
+      animation-delay: 0.1s;
+    }
+    &--2 {
+      animation-delay: 0.3s;
+    }
+    &--3 {
+      animation-delay: 0.5s;
+    }
+    &--4 {
+      animation-delay: 0.7s;
+    }
+
+    &__title {
+      padding: 0.8rem;
+      @include overflow;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      @include overflow;
+    }
+
+    p {
+      margin-top: 0.3rem;
+      margin-bottom: 0;
+      font-size: 1rem;
+      @include overflow;
+    }
+  }
+
+  &__price {
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  &__check {
+    width: 0;
+    background: $tertiary-color;
+    transition: 0.5s ease-in;
+    i {
+      color: #fff;
+      font-size: 1.5rem;
+      display: flex;
+      justify-content: center;
+      line-height: 65px;
+    }
+  }
+
+  &__card:hover {
+    .menu__check {
+      padding: 0 2rem 0 2rem;
+      transition: 0.5s ease-in;
+    }
+    i {
+      animation: rotate 1s;
+    }
+  }
+  div ~ p {
+    margin-top: 3rem;
+    text-align: center;
+  }
+}
